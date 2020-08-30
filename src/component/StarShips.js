@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-export default function StarShips() {
-	const [ships, setShips] = useState('');
-	useEffect(() => {
-		let url = 'https://swapi.dev/api/starships/';
-		axios
-			.get(url)
-			.then((response) => {
-				console.log(response.data.results)
-				setShips(response.data.results);
-			})
-			.catch((err) => console.log(err));
-	}, []);
-	
-
+import StarShipsResults from './StarShipsResults'
+export default function StarShips(props) {
+    const allShips = props.ships.map((s, idx) => {
+        return  <a href="/StarShipsResults" key={idx}>{s.name}</a>
+    })
 	return (
 		<div>
 			<h1>Star Ships</h1>
-			{ships.map(s => <li>{s.name}</li>)}
+            {/* {weather ? <WeatherResult weather={weather} /> : null} */}
+			{allShips}
 		</div>
 	);
 }
