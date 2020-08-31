@@ -1,9 +1,6 @@
-
 .App {
   text-align: center;
 }
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -48,13 +45,15 @@ body {
 .infos button {
   background-color:red;
   width: 100px;
-  height: 50px;
+  height: 30px;
   border-radius: 10px;
   font-family: 'Holtwood One SC', serif;
 }
+
 .infos h1 {
   color: yellow;
 }
+
 .infos,
 .welcome,
 .title {
@@ -64,4 +63,16 @@ body {
 .loading {
   color: white;
   margin: 50px auto;
+}
+
+.footerForce {
+  background: black;
+  color: rgb(255, 215, 0);
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/
+  height: 40px;
+  text-align: center;
 }
